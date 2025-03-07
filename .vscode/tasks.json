@@ -4,9 +4,12 @@
         {
             "label": "Build and Flash",
             "type": "shell",
-            "command": "C:/work/Keil5/Keil5/UV4/uVision.com",
+            "command": "powershell",
             "args": [
-                "-f",
+                "-ExecutionPolicy",
+                "Bypass",
+                "-File",
+                "${workspaceFolder}\\build_flash.ps1",
                 "${workspaceFolder}\\project.uvprojx"
             ],
             "group": {
